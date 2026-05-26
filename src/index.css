@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #002452;
+  --color-primary-container: #1b3a6b;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #89a5dd;
+  --color-secondary: #305cab;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-container: #7c000b;
+  --color-accent-red: #cc2b2b;
+  --color-surface: #f7f9fc;
+  --color-background: #f7f9fc;
+  --color-on-background: #191c1e;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #44474f;
+  --color-surface-variant: #e0e3e6;
+  --color-surface-container-low: #f2f4f7;
+  --color-surface-container: #eceef1;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline: #747780;
+  --color-outline-variant: #c4c6d0;
+  --color-error: #ba1a1a;
+  --color-success: #10b981;
+  --color-warning: #d97706;
+  --color-panel-tint: #eef3fb;
+  --spacing-sidebar-width: 240px;
+  --spacing-gutter: 16px;
+  --spacing-container-padding: 24px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 24px;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    margin: 0;
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+    user-select: none;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e5e9f2;
+    border-radius: 0.75rem;
+  }
+
+  .btn-primary {
+    @apply bg-primary-container text-on-primary font-medium rounded-lg px-6 py-3 transition-all active:scale-[0.98] hover:brightness-110;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-outline-variant text-primary-container font-medium rounded-lg px-6 py-3 transition-colors hover:bg-surface-container-low;
+  }
+
+  .input-field {
+    @apply w-full py-3 pl-10 pr-4 bg-white border border-outline-variant rounded-lg text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/10 focus:border-secondary transition-all;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4c6d0;
+  border-radius: 10px;
+}

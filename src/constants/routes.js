@@ -1,0 +1,30 @@
+export const ROUTES = {
+  BERANDA: '/',
+  MASUK: '/masuk',
+  DAFTAR: '/daftar',
+  VERIFIKASI: '/verifikasi',
+  PILIH_BISNIS: '/pilih-bisnis',
+  ATUR_TOKO: '/atur-toko',
+  DASHBOARD: '/dashboard',
+  KASIR: '/kasir',
+  PRODUK: '/produk',
+  PRODUK_KOSONG: '/produk/kosong',
+  STOK: '/stok',
+  LAPORAN: '/laporan',
+  LAPORAN_SELISIH: '/laporan/selisih-stok',
+  KARYAWAN: '/karyawan',
+  PENGATURAN: '/pengaturan',
+  NOTIFIKASI: '/notifikasi',
+  MEJA: '/meja',
+  STRUK: '/struk',
+  LUPA_PASSWORD: '/lupa-password',
+};
+
+export const NAV_ITEMS = [
+  { ke: ROUTES.DASHBOARD, ikon: 'grid_view', label: 'Dashboard' },
+  { ke: ROUTES.KASIR, ikon: 'receipt', label: 'Kasir' },
+  { ke: ROUTES.PRODUK, ikon: 'sell', label: 'Produk' },
+  { ke: ROUTES.LAPORAN, ikon: 'bar_chart_4_bars', label: 'Laporan' },
+  { ke: ROUTES.KARYAWAN, ikon: 'person', label: 'Karyawan' },
+  { ke: ROUTES.PENGATURAN, ikon: 'settings', label: 'Pengaturan' },
+];
